@@ -1,0 +1,133 @@
+html,body{
+  height: 100%;
+  min-height:100%;
+}
+#contenido{
+  min-height: 90%;
+  padding-top: 72px;
+  padding-bottom: 10px;
+}
+
+img{
+  height:200px !important;
+  width:auto !important;
+  margin-bottom:10px !important;
+}
+
+.col-xs-4{
+  margin-bottom: 10px !important;
+}
+
+.detalleProducto{
+  width:280px;
+}
+
+.precioDetalle, .cantidadDetalle{
+  width:26% !important;
+}
+
+.red{
+  color:#c32828 !important;
+}
+
+
+.blue{
+  color: 	#1E90FF;
+}
+
+.precio {
+  font-weight: bolder !important;
+  font-size: 1.2em !important;
+  text-align: center;
+  width:180px;
+
+}
+
+.numCarrito{
+  -moz-border-radius:15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background: #d3d3d3;
+  color: #000;
+  position: absolute;
+  left: 31px;
+  top: 13px;
+  display: block;
+  font-size: 0.7em;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  line-height: 1.4em;
+}
+
+.carrito{
+color:#c32828;
+font-size:1.6em;
+}
+
+.precioEnvio{
+  width:180px;
+}
+
+.center{
+  text-align: center;
+}
+.left{
+  text-align: left;
+}
+
+.cursiva{
+font-style: italic;
+}
+
+#cantidad{
+  width:36px;
+}
+#modificarCantidad{
+  width: 86px;
+  line-height: 0.3em;
+  padding-right: 0px;
+}
+
+#eliminarProducto{
+  width: 40px;
+  line-height: 1.6em;
+  padding-left: 0px;
+
+}
+
+.right{
+    float:right;
+}
+
+.btn-grey{
+  background-color: #222;
+  color:#FFF;
+}
+
+.btn-grey:hover{
+  background-color: #d3d3d3;
+  color:#000;
+}
+
+footer{
+  background-color: #222;
+  color:#9d9d9d;
+}
+
+footer li, li a{
+  color: #9d9d9d;
+  text-decoration:none;
+  list-style: none;
+}
+footer li a:hover{
+  color:#fff;
+  text-decoration:none;
+}
+
+.webSociales i:hover {
+    -webkit-text-shadow: 0px 0px 0.625em #FFF0F5;
+    -moz-text-shadow: 0px 0px 0.625em #FFF0F5;
+    -o-text-shadow: 0px 0px 0.625em #FFF0F5;
+    text-shadow: 0px 0px 0.625em #FFF0F5;
+}
