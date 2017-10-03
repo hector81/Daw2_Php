@@ -1,0 +1,15 @@
+body {
+	margin:2em auto;
+	background-color:yellow;
+}
+
+#contenedor {
+	background-color:pink;
+	padding: 1em;
+	margin:2em;
+	text-align:center;
+}
+
+h1 {
+	color:red;
+}
