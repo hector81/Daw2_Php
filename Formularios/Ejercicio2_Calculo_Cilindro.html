@@ -1,0 +1,34 @@
+﻿<!-- 2. Diseñar un formulario web que pida la altura y el diámetro de un cilindro en metros. Una
+vez el usuario introduzca los datos y pulse el botón calcular, deberá calcularse el volumen
+del cilindro y mostrarse el resultado en el navegador. -->
+		<?php
+			$var = (isset($_POST['var']))?$_POST['var']:null;
+			$alturaCilindro = (isset($var['alturaCilindro']))?$var['alturaCilindro']:'';//si esta establecido lo paso sino lo pongo '' vacio
+			$diametroCilindro = (isset($var['diametroCilindro']))?$var['diametroCilindro']:'';
+			$enviado = (isset($_POST['Aceptr']))?true:false;
+		?>
+<html>
+	<head>
+		<title>Formulario web que pida la altura y el diámetro de un cilindro en metros para calcular el volumen</title>
+	</head>
+	
+	<body> 
+		<form name="input" action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
+		Altura del cilindro: <input type="text" value="<?= $alturaCilindro?>" name="var[alturaCilindro]"><br>
+		
+		<?php
+			if(isset($enviado && empty($alturaCilindro))
+			echo "es un campo obligatorio";
+		?>
+		<br>
+		Diametro del cilindro: <input type="text" value="<?= $diametroCilindro?>" name="var[diametroCilindro]"><br>
+		
+		<?php
+			if(isset($_POST['Aceptar']) && empty($diametroCilindro))//si esta estabelcido el aceptar y vacio el campo
+			echo "es un campo obligatorio";
+		?>
+		<br>
+		<input type="submit" name="Aceptar" value="ok">
+		</form>
+	</body>
+</html>
