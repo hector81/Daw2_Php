@@ -1,0 +1,271 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background:#1E6381;
+	color: #F60;
+	font-family: Verdana;
+	font-size: 1em;
+	margin: 0.25em auto;
+}
+
+.aclarar {
+    clear:both;
+}
+
+h1 {
+	text-align: center;
+	display: block;
+	margin: auto;
+
+}
+
+header, footer {
+	background:white;
+	border-radius:0.5em;
+	margin: 0.5em auto;
+	max-width: 95%;
+	padding:0.25em;
+	text-align: center;
+}
+
+header #parteCentralIzquierda {
+    float:left;
+}
+
+header #parteCentralDerecha {
+    float:right;
+}
+
+section#contenedor{
+	padding:0px;
+	margin: 0.5em auto;
+	border-radius:0.5em;
+	max-width: 95%;
+	text-align: center;
+}
+
+
+section#principal, aside{
+	background:white;
+	border-radius:0.5em;
+	display: inline-block ;
+	margin: 0.25em auto;
+	max-width: 85%;
+	padding:0.25em;
+	vertical-align: top;
+	width: 65%;
+}
+
+article{
+	border-radius:0.5em;
+	min-height: 25%; /* peso minimo */
+	padding:0.25em;
+}
+
+form {
+	margin: 0.5em auto;
+  max-width: 20em; /* ancho maximo */
+  padding:0.25em;
+	position: static;
+}
+
+span.tituloPrecio{
+	border-radius:1.5em;
+	border:2px solid black;
+	color:black;
+	padding:0.25em;
+	width:12em;
+  background-color: rgba(215, 167, 84, 0.6);
+  background: rgba(215, 167, 84, 0.6);
+  color: rgba(215, 167, 84, 0.6);
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+
+span.negro{
+	color:black;
+}
+
+.columna1, .columna2, .columna3 {
+	float:left;
+	background-color: white;
+	margin:2em 1.5em 2.5em 1.5em;
+	position: relative;
+	display: block;
+	column-count: 1;
+	column-width: 30%;
+	/*width: 30%;*/
+	column-gap: 2em;
+}
+
+
+aside {
+	width: 100%;
+	max-width: 22em; /* ancho maximo */
+	min-width: 5em; /* ancho maximo */
+  padding:0.25em;
+}
+
+.precioTr {
+   width: 100px;
+   height: auto;
+   margin: 10px;
+   background-color: yellow;
+   border: 1px solid black;
+   font-family: bold;
+}
+
+.precioTd {
+   background-color: pink;
+   border: 1px solid black;
+   font-family: bold;
+   color:black;
+}
+
+.pedidoTD {
+  background-color: pink;
+  border:none;
+  font-family: bold;
+  width: 250px;
+	color:black;
+}
+
+.precioTitulo {
+  background-color: green;
+  border: 1px solid black;
+  font-family: bold;
+}
+
+.precioTdPrincipal {
+  background-color: green;
+}
+
+.precioTituloTD {
+  background-color: green;
+  border: 1px solid black;
+  font-family: bold;
+  width: 100%;
+}
+
+.precioTdVacio {
+    visibility: hidden;
+    border:none;
+}
+
+.precioTrColorTotal {
+  background-color: blue;
+  border: 5px solid black;
+}
+
+/*PARA EL PRECIO FINAL */
+.precioTrTotal {
+   width: 100px;
+   height: auto;
+   margin: 10px;
+   background-color: yellow;
+   border: 1px solid black;
+   font-family: bold;
+}
+
+.precioTdTotal {
+   background-color: pink;
+   border: 1px solid black;
+   font-family: bold;
+   color:black;
+}
+
+/* PARA EL FINAL */
+section.seccionFINAL {
+	width: 100%
+}
+
+table.tablaFINAL {
+	width: 45%;
+	border: none;
+	background-color: none;
+	text-align: center;
+  display: block;
+  margin: auto;
+}
+
+/******************************/
+
+#repartidor {
+  display:block;
+  margin:auto;
+}
+
+#mensajeCancelar {
+	display:block;
+  margin:2em;
+	color: #873636;
+	border:1px solid black;
+	padding:2em;
+	background:white;
+}
+
+#mensajeConfirmar {
+  display:block;
+  margin:2em;
+	color: #873636;
+	border:1px solid black;
+	padding:2em;
+	background:white;
+}
+
+/* ESTO ES PARA EL BOTON */
+.centroBoton {
+  text-align: center;
+	display: block;
+	margin: auto;
+}
+
+input.centroBoton {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1em;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.centroBoton:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+/* ESTO ES PARA LA FACTURA TOTAL */
+#facturaTotal {
+	background-color: yellow;
+	border:1px solid black;
+	border-radius: 3em;
+	text-align: center;
+	display: block;
+	margin: auto;
+	font-size: 1.5em;
+}
+
+table.totalPedidos {
+	width: 20em;
+	margin: 0.5em auto;
+	max-width: 20em;
+	padding: 0.25em;
+	position: static;
+}
