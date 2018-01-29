@@ -1,0 +1,45 @@
+body {
+	margin:2em auto;
+	background-color:yellow;
+}
+
+#todoContain {
+	background-color:grey;
+	padding: 1em;
+	margin:2em;
+}
+
+#contenedor {
+	background-color:pink;
+	padding: 1em;
+	margin:2em;
+	text-align:center;
+}
+
+h1 {
+	color:red;
+}
+
+table {
+	background-color:pink;
+	border:1px solid black;
+	padding:5px;
+}
+
+tr {
+	background-color:lightblue;
+}
+
+form {
+	text-align:left;
+	background-color: grey;
+}
+
+#present {
+	color: green;
+	font-size:1.6em;
+}
+
+.formR {
+	margin-left: 150px;
+}
