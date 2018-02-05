@@ -1,0 +1,184 @@
+CREATE TABLE Cliente
+(idCliente INT NOT NULL IDENTITY,
+nombre NVARCHAR(100) NOT NULL,
+direccion NVARCHAR(100) NOT NULL,
+tlfno CHAR(9) NOT NULL,
+eCorreo NVARCHAR(100) NOT NULL,
+CONSTRAINT PkCliente PRIMARY KEY (idCliente)
+);
+CREATE TABLE Pizza
+(idPizza INT NOT NULL IDENTITY,
+nombre  NVARCHAR(50),
+descripcion NVARCHAR(150),
+CONSTRAINT PkPizza PRIMARY KEY (idPizza)
+);
+INSERT INTO Pizza(nombre,descripcion)
+VALUES ('Margarita', 'con tomate, mozzarella, albahaca fresca, sal y aceite'),
+('Barbacoa', 'Con carne picada cerdo, pimiento rojo, cebolla, salsa barbacoa y mozarella'),
+('4 estaciones', 'Con aceitunas verdes, berenjena, champiñones, mozzarella, oregano, prosciutto'),
+('4 quesos', 'Con salsa de tomate, aceitunas negras, mozzarella, parmesano reggiano, emmental'),
+('Romana', 'Con jamón york, champiñones, aceitunas negras, mozzarella, salsa de tomate, orégano'),
+('Mediterránea', 'Con espárragos verdes, calabacín, setas, mozzarella, salsa de tomate'),
+('Carbonara', 'Con bacon, parmesano, mozzarella, nata líquida, yemas de huevo y salsa de tomate');
+go
+CREATE TABLE Tamanio
+(idTamanio INT IDENTITY NOT NULL,
+nombre NVARCHAR(8) NOT NULL,
+CONSTRAINT PkTamanio PRIMARY KEY (idTamanio)
+);
+
+INSERT INTO Tamanio(nombre)
+VALUES('Normal'),('Grande'),('Familiar');
+go
+CREATE TABLE Extras
+(idExtra INT IDENTITY NOT NULL,
+nombre NVARCHAR(15)  NOT NULL,
+pv MONEY NOT NULL,
+CONSTRAINT PkExtras PRIMARY KEY (idExtra)
+);
+
+INSERT INTO Extras(nombre,pv)
+VALUES ('Queso', 0.55),
+('Jamón', 0.75),
+('Pimiento', 0.4),
+('Pollo', 0.6),
+('Cebolla',0.3),
+('Cerdo',0.7);
+go
+CREATE TABLE Precios
+(idPrecio INT IDENTITY NOT NULL,
+idPizza INT NOT NULL,
+idTamanio INT NOT NULL,
+pv MONEY NOT NULL,
+CONSTRAINT PkPrecios PRIMARY KEY (idPrecio),
+CONSTRAINT FkPizzaNPrecio FOREIGN KEY (idPizza) REFERENCES Pizza(idPizza),
+CONSTRAINT FkTamanioNPrecio FOREIGN KEY (idTamanio) REFERENCES Tamanio(idTamanio)
+);
+INSERT INTO Precios(idPizza, idTamanio, pv)
+VALUES(1,1,9),
+(1,2,11.5),
+(1,3,14),
+(2,1,10.5),
+(2,2,13),
+(2,3,16),
+(3,1,10),
+(3,2,12),
+(3,5,15),
+(4,1,8),
+(4,2,10),
+(4,3,13),
+(5,1,8),
+(5,2,10),
+(5,3,13),
+(6,1,11),
+(6,2,13.75),
+(6,3,16.25),
+(7,1,9.5),
+(7,2,11.75),
+(7,3,14.25);
+GO
+
+CREATE TABLE Pedido
+(idPedido INT IDENTITY NOT NULL,
+idCliente INT NOT NULL,
+fPedido DATETIME2(7) NOT NULL DEFAULT GETDATE(),
+CONSTRAINT PkPedido PRIMARY KEY (idPedido),
+CONSTRAINT FkClienteNPedido FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente)
+);
+CREATE TABLE LineaPedido
+(idPedido INT NOT NULL,
+idPrecio INT NOT NULL,
+cantidad TINYINT NOT NULL,
+CONSTRAINT PkLineaPedido PRIMARY KEY (idPedido, idPrecio),
+CONSTRAINT FkPedidoNLineaPedido FOREIGN KEY(idPedido) REFERENCES Pedido(idPedido),
+CONSTRAINT FkPrecioNLineaPedido FOREIGN KEY (idPrecio) REFERENCES Precios(idPrecio)
+);
+
+CREATE TABLE Precios
+(idPrecio INT IDENTITY NOT NULL,
+idPizza INT NOT NULL,
+idTamanio INT NOT NULL,
+pv MONEY NOT NULL,
+CONSTRAINT PkPrecios PRIMARY KEY (idPrecio),
+CONSTRAINT FkPizzaNPrecio FOREIGN KEY (idPizza) REFERENCES Pizza(idPizza),
+CONSTRAINT FkTamanioNPrecio FOREIGN KEY (idTamanio) REFERENCES Tamanio(idTamanio)
+);
+INSERT INTO Precios(idPizza, idTamanio, pv)
+VALUES(1,1,9),
+(1,2,11.5),
+(1,3,14),
+(2,1,10.5),
+(2,2,13),
+(2,3,16),
+(3,1,10),
+(3,2,12),
+(3,5,15),
+(4,1,8),
+(4,2,10),
+(4,3,13),
+(5,1,8),
+(5,2,10),
+(5,3,13),
+(6,1,11),
+(6,2,13.75),
+(6,3,16.25),
+(7,1,9.5),
+(7,2,11.75),
+(7,3,14.25);
+GO
+
+CREATE TABLE Pedido
+(idPedido INT IDENTITY NOT NULL,
+idCliente INT NOT NULL,
+fPedido DATETIME2(7) NOT NULL DEFAULT GETDATE(),
+CONSTRAINT PkPedido PRIMARY KEY (idPedido),
+CONSTRAINT FkClienteNPedido FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente)
+);
+CREATE TABLE LineaPedido
+(idPedido INT NOT NULL,
+idPrecio INT NOT NULL,
+cantidad TINYINT NOT NULL,
+CONSTRAINT PkLineaPedido PRIMARY KEY (idPedido, idPrecio),
+CONSTRAINT FkPedidoNLineaPedido FOREIGN KEY(idPedido) REFERENCES Pedido(idPedido),
+CONSTRAINT FkPrecioNLineaPedido FOREIGN KEY (idPrecio) REFERENCES Precios(idPrecio)
+);
+
+CREATE TABLE ExtrasPedido
+(idPedido INT NOT NULL,
+idPrecio INT NOT NULL,
+idExtra INT NOT NULL
+CONSTRAINT PkExtrasPedido PRIMARY KEY(idPedido, idPrecio, idExtra),
+CONSTRAINT FkLineaPedidoNExtrasPedido FOREIGN KEY (idPedido,idPrecio) REFERENCES LineaPedido (idPedido, idPrecio),
+CONSTRAINT FkExtrasNExtrasPedido FOREIGN KEY (idExtra) REFERENCES Extras (idExtra)
+);
+
+AÑADIR , NO SE SI ESTA BIEN
+alter table Pizza
+add column Masa nvarchar(10) default 'Normal'
+-----------------
+create view precio as
+select idPrecio, pz.nombre as pizza, t.nombre as tamanio, pv from tamanio as t inner join precios as p on t.idTamanio = p.idTamanio inner join Pizza as pz on p.idPizza=pz.idPizza;
+
+select * from Pedido
+select * from LineaPedido
+select * from ExtrasPedido
+
+select idCliente, pz.nombre as pizza, t.nombre as tamanio, lp.cantidad, lp.masa,  e.nombre as extra
+from Tamanio as t 
+inner join Precios as p on t.idTamanio=p.idTamanio
+inner join Pizza as pz on p.idPizza=pz.idPizza
+inner join LineaPedido as lp on lp.idPrecio=p.idPrecio
+inner join ExtrasPedido as ep on lp.idPedido=ep.idPedido and lp.idPrecio=ep.idPrecio
+inner join Extras as e on ep.idExtra=e.idExtra
+inner join Pedido as pe on pe.idPedido=lp.idPedido
+---------------------
+create view X as
+select idCliente, pz.nombre as pizza, t.nombre as tamanio, lp.cantidad, lp.masa,  e.nombre as extra
+ from Pedido as pe
+inner join LineaPedido as lp on lp.idPrecio=pe.idPedido
+inner join Precios as p on lp.idPrecio=p.idPrecio
+inner join Pizza as pz on p.idPizza=pz.idPizza
+inner join Tamanio as t on t.idTamanio=p.idTamanio
+left outer join ExtrasPedido as ep on lp.idPedido=ep.idPedido and lp.idPrecio=ep.idPrecio
+inner join Extras as e on ep.idExtra=e.idExtra
+

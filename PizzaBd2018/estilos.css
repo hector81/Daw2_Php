@@ -1,0 +1,422 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: url("imagenes/fondo1.jpg");
+	color: #F60;
+	font-family: Verdana;
+	font-size: 1em;
+	margin: 0.25em auto;
+}
+
+.aclarar {
+    clear:both;
+}
+
+h1.tituloPresentacion {
+	text-align: center;
+	display: block;
+	margin: auto;
+	border:inset 7px #000000;
+	-moz-border-radius: 47px;
+	-webkit-border-radius: 47px;
+	border-radius: 47px;
+	width:50%;
+	background-color: #FFF8DC;
+	color: red;
+}
+
+h1.tituloDatosDerecha {
+	text-align: center;
+	display: block;
+	margin: auto;
+	border:inset 7px #000000;
+	-moz-border-radius: 47px;
+	-webkit-border-radius: 47px;
+	border-radius: 47px;
+	width:50%;
+	background-color: #FFF8DC;
+	color: red;
+}
+
+h2 {
+	background-color: #FFF8DC;
+	border-radius: 47px;
+}
+
+table {
+	background:white;
+}
+
+p.parrafoDatosDerecha {
+	background:white;
+}
+
+h1.parrafoDatosDerecha {
+	background:white;
+}
+
+h1.clientes {
+	background:yellow;
+	border:1px solid black;
+	color:red;
+	width: 25em;
+}
+
+header {
+	max-width: 65%;
+	border:5px solid black;
+	border-top-left-radius:31px;
+	border-top-right-radius:31px;
+	border-bottom-left-radius:31px;
+	border-bottom-right-radius:31px;
+	background-color: white;
+}
+
+footer {
+	max-width: 95%;
+	border:5px solid black;
+}
+header, footer {
+	background:white;
+	border-radius:0.5em;
+	margin: 0.5em auto;
+	padding:0.25em;
+	text-align: center;
+}
+
+header #parteCentralIzquierda {
+    float:left;
+}
+
+header #parteCentralCentral {
+    float:left;
+		color: black;
+		margin: 0.5em;
+		margin-left:1.5em;
+		padding:0.25em;
+		font-size: 1.5em;
+}
+
+header #parteCentralDerecha {
+    float:right;
+}
+
+section#contenedor{
+	padding:0px;
+	margin: 0.5em auto;
+	border-radius:0.5em;
+	max-width: 95%;
+	text-align: center;
+}
+
+
+section#principal, aside{
+	border:5px solid black;
+	border-top-left-radius:31px;
+	border-top-right-radius:31px;
+	border-bottom-left-radius:31px;
+	border-bottom-right-radius:31px;
+	display: inline-block ;
+	margin: 0.25em auto;
+	max-width: 85%;
+	padding:0.25em;
+	vertical-align: top;
+	width: 65%;
+	text-align: center;
+}
+
+section#principal {
+	background-image: url("imagenes/fondoPizza3.jpg");
+}
+
+aside {
+	width: 100%;
+	max-width: 22em; /* ancho maximo */
+	min-width: 5em; /* ancho maximo */
+  padding:0.25em;
+	border:5px solid black;
+	border-top-left-radius:31px;
+	border-top-right-radius:31px;
+	border-bottom-left-radius:31px;
+	border-bottom-right-radius:31px;
+	background-color: white;
+}
+
+aside.izquierdaAside {
+	background-image: url("imagenes/fondoPizza1.jpg");
+}
+
+article{
+	border-radius:0.5em;
+	min-height: 25%; /* peso minimo */
+	padding:0.25em;
+}
+
+form {
+	margin: 0.5em auto;
+  max-width: 20em; /* ancho maximo */
+  padding:0.25em;
+	position: static;
+	background-color:white;
+}
+
+span.tituloPrecio{
+	border-radius:1.5em;
+	border:2px solid black;
+	color:black;
+	padding:0.25em;
+	width:12em;
+  background-color: #A52A2A;
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+
+span.negro{
+	color:black;
+	float:left;
+	width:20em;
+	margin: 0.25em auto;
+	padding:0.25em;
+	background:white;
+}
+
+img.imagenExtra {
+	width:50px;
+	height: 50px;
+	float:left;
+	margin: 0.25em auto;
+	padding:0.25em;
+	border:1px solid black;
+	background-color:white;
+}
+.columna {
+	background-image: url("imagenes/fondoPizza2.jpg");
+	border:solid 5px #000000;
+	border-top-left-radius:20px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:34px;
+	border-bottom-right-radius:36px;
+	margin:2em 1.5em 2.5em 1.5em;
+	height: 17em;
+	width: 95%;
+}
+
+.columnaExtras {
+	background-image: url("imagenes/fondoPizza.jpg");
+	border:solid 5px #000000;
+	border-top-left-radius:20px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:34px;
+	border-bottom-right-radius:36px;
+	margin:2em 1.5em 2.5em 1.5em;
+	height: 27em;
+	width: 55%;
+	text-align: center;
+}
+
+.descripcion {
+	float:left;
+	border:solid 5px #000000;
+	height: auto;
+	width: 70%;
+	margin:0.5em;
+	padding:0.5em;
+	background-color: grey;
+}
+
+.imagenIzquierda {
+	text-align: center;
+	height: auto;
+	margin:0.5em;
+	padding:0.5em;
+}
+
+.imagenDerecha {
+	height: auto;
+	float:right;
+	width: 10%;
+	margin:0.5em;
+	padding:0.5em;
+}
+
+.aclarar {
+	clear:both;;
+}
+
+.precioTr {
+   width: 100px;
+   height: auto;
+   margin: 10px;
+   background-color: yellow;
+   border: 1px solid black;
+   font-family: bold;
+}
+
+.precioTd {
+   background-color: pink;
+   border: 1px solid black;
+   font-family: bold;
+   color:black;
+}
+
+.pedidoTD {
+  background-color: pink;
+  border:none;
+  font-family: bold;
+  width: 250px;
+	color:black;
+}
+
+.precioTitulo {
+  background-color: green;
+  border: 1px solid black;
+  font-family: bold;
+}
+
+.precioTdPrincipal {
+  background-color: green;
+}
+
+.precioTituloTD {
+  background-color: green;
+  border: 1px solid black;
+  font-family: bold;
+  width: 100%;
+}
+
+.precioTdVacio {
+    visibility: hidden;
+    border:none;
+}
+
+.precioTrColorTotal {
+  background-color: blue;
+  border: 5px solid black;
+}
+
+/*PARA EL PRECIO FINAL */
+.precioTrTotal {
+   width: 100px;
+   height: auto;
+   margin: 10px;
+   background-color: yellow;
+   border: 1px solid black;
+   font-family: bold;
+}
+
+.precioTdTotal {
+   background-color: pink;
+   border: 1px solid black;
+   font-family: bold;
+   color:black;
+}
+
+/* PARA EL FINAL */
+.precioTablaTotal {
+	width:350px;background-color: grey;margin-left: 15em;
+}
+
+section.seccionFINAL {
+	width: 100%
+}
+
+table.tablaFINAL {
+	width: 45%;
+	border: none;
+	background-color: none;
+	text-align: center;
+  display: block;
+  margin: auto;
+}
+
+/******************************/
+
+#repartidor {
+  display:block;
+  margin:auto;
+}
+
+#mensajeCancelar {
+	display:block;
+  margin:2em;
+	color: #873636;
+	border:1px solid black;
+	padding:2em;
+	background:white;
+}
+
+#mensajeConfirmar {
+  display:block;
+  margin:2em;
+	color: #873636;
+	border:1px solid black;
+	padding:2em;
+	background:white;
+}
+
+/* ESTO ES PARA EL BOTON */
+.centroBoton {
+  text-align: center;
+	display: block;
+	margin: auto;
+}
+
+input.centroBoton {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1em;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.centroBoton:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+/* ESTO ES PARA LA FACTURA TOTAL */
+#facturaTotal {
+	background-color: yellow;
+	border:1px solid black;
+	border-radius: 3em;
+	text-align: center;
+	display: block;
+	margin: auto;
+	font-size: 1.5em;
+}
+
+table.totalPedidos {
+	width: 20em;
+	margin: 0.5em auto;
+	max-width: 20em;
+	padding: 0.25em;
+	position: static;
+}
+
+/*para errores */
+
+div.errorAviso {
+	border: 1px solid black;
+	font-weight: bold;
+	font-family: cursive;
+	color:red;
+	background-color: yellow;
+}
