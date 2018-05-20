@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding:0;
+}
+
+body {
+    margin:1em;
+    padding:1em;
+    background-color:white;
+    border:1px solid black;
+}
+
+/*************/
+/****PARA EL HEADER***/
+/********************/
+
+
+
+
+nav {
+  border-radius:0.5em;
+  width:100%;
+  height:7.5em;
+  text-align:center;
+  margin:0.5em;
+  padding:1em;
+}
+
+/*****************************/
+/********PARA LOS LIBROS DE ENTRADA**>
+/*************************/
+
+
+
+/***************************/
+/*******ASIDE*************/
+/**********************/
+
+span.rojo {
+  color:red;
+}
+/*******************************/
+/*******FOOTER*********/
+/*****************************/
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/*********aclarar*****/
+
+.baseLibrosLateral {
+  text-align:left;
+  float:left;
+}
+
+.aclarar {
+  clear:both;
+}
+
+img.imagenPeque {
+  width:120px;
+  height:160px;
+}
+
+img { /*imagen*/
+  width:230px;/*160*/
+  height:300px;/*//61*/
+  border:1px solid black;
+  border-radius:0.5em;
+}
+
+img.imagenFooter {
+  width:500px;
+  height:278px;
+}
+
+.col-sm-3 {
+    width: 100%;
+}
+.col-sm-3 {
+    float: left;
+}
+
+.container2 {
+  width:12em;
+}
+
+.card-title {
+  text-align: center;
+  height:4em;
+  margin-bottom:0.5em;
+}
+
+.card-text {
+  text-align: left;
+  height:2.5em;
+  margin-bottom:0.5em;
+}
+
+.card-textBottom {
+  height:1.5em;
+  text-align: left;
+  margin-bottom:0.5em;
+}
+
+
+@media (max-width: 480px) {
+  .book_home_r, .book_home_l {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.book_home_r {
+	margin-right: 25px;
+
+ }
